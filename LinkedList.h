@@ -9,24 +9,32 @@
 #include <iostream>
 using namespace std;
 
-class LinkedList{
+class LinkedList {
 
 public:
     //Constructors
     LinkedList();
-    LinkedList(const LinkedList & list);
 
-    //Assignment Operator
-    LinkedList &operator=(const LinkedList & rhs);
+    LinkedList(int *head);
 
-    //Destructor
+
+    //Big Three Implementation
     ~LinkedList();
+
+    LinkedList(const LinkedList &list);
+
+    LinkedList &operator=(const LinkedList &rhs);
+
 
     //Functions. You may not need to use them all
     void append(YourClass obj);
-    bool Delete (YourClass obj);
-    YourClass find (YourClass obj)
+
+    bool Delete(YourClass obj);
+
+    YourClass find(YourClass obj);
+
     void printList();
+
     void InsertionSort();
 
 private:

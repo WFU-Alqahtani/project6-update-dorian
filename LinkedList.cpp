@@ -3,3 +3,9 @@
 //
 
 #include "LinkedList.h"
+#include "Node.h"
+
+
+void InsertionSort(Node *head) {
+
+}

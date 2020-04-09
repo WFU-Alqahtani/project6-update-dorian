@@ -1,13 +1,13 @@
 #include "BinaryInsertionSort.h"
 using namespace std;
 
-int binarySearch(vector<YourClass> a, YourClass item, int low, int high) {
+YourClass binarySearch(vector<YourClass> a, YourClass item, YourClass low, YourClass high) {
     if (high <= low) {
         return (item > a[low] ? (low + 1) : low);
     }
 
     // middle index
-    int mid = (low + high) / 2;
+    YourClass mid = (low + high) / 2;
 
     // found it
     if (item == a[mid])
@@ -22,15 +22,15 @@ int binarySearch(vector<YourClass> a, YourClass item, int low, int high) {
 void insertionSort(vector<YourClass> &a, int n) {
 
     for (int i = 1; i < n; i++) {
-        int j = i - 1;
-        int selected = a[i];
+        unsigned int j = i - 1;
+        YourClass selected = a[i];
 
         // find location where selected should be inserted
-        int loc = binarySearch(a, selected, 0, j);
+        YourClass loc = binarySearch(a, selected, 0, j);
 
         // move all elements after location to create space
         while (j >= loc) {
-            a[j+1] = a[j];
+            a[j + 1] = a[j];
             j--;
         }
         a[loc] = selected;
