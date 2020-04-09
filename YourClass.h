@@ -14,7 +14,7 @@ public:
 
     YourClass(int i);
 
-    unsigned int operator+(YourClass rhs);
+    YourClass operator+(YourClass rhs);
 
     YourClass operator-(YourClass lhs);
 
